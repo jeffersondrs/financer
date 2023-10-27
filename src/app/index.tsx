@@ -25,6 +25,7 @@ import Header from "../components/Header";
 import ButtonAdd from "../components/ButtonAdd";
 import Items from "../components/Items";
 import { DataItem, data } from "../data/data";
+import MonthComponent from "../components/Month";
 
 export default function Page() {
   const calcularTotalEntradasESaidas = (data: DataItem) => {
@@ -57,6 +58,7 @@ export default function Page() {
         value={totalEntradasMenosSaidas}
       />
       <ButtonAdd />
+      <MonthComponent />
 
       <FlatList
         data={data}

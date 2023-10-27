@@ -72,7 +72,7 @@ export default function Header({
         position: "relative",
         alignItems: "flex-start",
         backgroundColor: "#ffd500",
-        height: "22%",
+        height: 180,
       }}
     >
       <View
@@ -95,23 +95,16 @@ export default function Header({
             borderRadius: 150,
             position: "absolute",
             bottom: -70,
-            left: 10,
+            left: 15,
             borderColor: "#ffd500",
             borderWidth: 5,
-            shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 0,
-            },
-            shadowOpacity: 0.25,
-            shadowRadius: 3.84,
           }}
         />
         <View
           style={{
             position: "absolute",
-            bottom: -65,
-            right: 30,
+            bottom: -70,
+            right: 20,
           }}
         >
           <Text
@@ -119,6 +112,7 @@ export default function Header({
               color: "#000",
               fontSize: 13,
               fontFamily: "Poppins_500Medium",
+              textAlign: "right",
             }}
           >
             Valor {status}
@@ -173,7 +167,7 @@ export default function Header({
                   style={{
                     position: "absolute",
                     top: -30,
-                    right: -10,
+                    right: -5,
                   }}
                 />
               ) : (

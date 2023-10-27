@@ -1,53 +1,17 @@
-import { Text, View } from "react-native";
-import {
-  useFonts,
-  Poppins_100Thin,
-  Poppins_100Thin_Italic,
-  Poppins_200ExtraLight,
-  Poppins_200ExtraLight_Italic,
-  Poppins_300Light,
-  Poppins_300Light_Italic,
-  Poppins_400Regular,
-  Poppins_400Regular_Italic,
-  Poppins_500Medium,
-  Poppins_500Medium_Italic,
-  Poppins_600SemiBold,
-  Poppins_600SemiBold_Italic,
-  Poppins_700Bold,
-  Poppins_700Bold_Italic,
-  Poppins_800ExtraBold,
-  Poppins_800ExtraBold_Italic,
-  Poppins_900Black,
-  Poppins_900Black_Italic,
-} from "@expo-google-fonts/poppins";
+import { Text, View, TouchableOpacity } from "react-native";
+import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
 
 type ItemsProps = {
   title: string;
   value: number;
   date: string;
   status: string;
+  month?: string;
 };
 
 export default function Items({ title, value, date, status }: ItemsProps) {
   let [fontsLoaded, fontError] = useFonts({
-    Poppins_100Thin,
-    Poppins_100Thin_Italic,
-    Poppins_200ExtraLight,
-    Poppins_200ExtraLight_Italic,
-    Poppins_300Light,
-    Poppins_300Light_Italic,
     Poppins_400Regular,
-    Poppins_400Regular_Italic,
-    Poppins_500Medium,
-    Poppins_500Medium_Italic,
-    Poppins_600SemiBold,
-    Poppins_600SemiBold_Italic,
-    Poppins_700Bold,
-    Poppins_700Bold_Italic,
-    Poppins_800ExtraBold,
-    Poppins_800ExtraBold_Italic,
-    Poppins_900Black,
-    Poppins_900Black_Italic,
   });
 
   if (!fontsLoaded && !fontError) {
@@ -58,14 +22,15 @@ export default function Items({ title, value, date, status }: ItemsProps) {
     currency: "BRL",
   });
   return (
-    <View
+    <TouchableOpacity
       style={{
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: 10,
+        paddingVertical: 20,
+        paddingHorizontal: 10,
         borderBottomColor: "#ffd500",
-        borderBottomWidth: 1,
+        borderBottomWidth: 5,
         backgroundColor: "#000",
       }}
     >
@@ -76,23 +41,42 @@ export default function Items({ title, value, date, status }: ItemsProps) {
           alignItems: "flex-start",
         }}
       >
-        <Text style={{ fontSize: 20, fontFamily: "Poppins_200ExtraLight", color: "#fff" }}>
+        <Text
+          style={{
+            fontSize: 14,
+            fontFamily: "Poppins_400Regular",
+            color: "#ffd500",
+            letterSpacing: 1.3,
+            lineHeight: 30,
+            maxWidth: 250,
+          }}
+        >
           {title}
         </Text>
-        <Text style={{ fontSize: 15, fontFamily: "Poppins_200ExtraLight",  color: "#fff"  }}>
+        <Text
+          style={{
+            fontSize: 12,
+            fontFamily: "Poppins_400Regular",
+            color: "#ffd500",
+            letterSpacing: 1.3,
+            lineHeight: 30,
+          }}
+        >
           {date}
         </Text>
       </View>
       <Text
         style={{
-          fontSize: 20,
-          fontFamily: "Poppins_200ExtraLight",
+          fontSize: 17,
+          fontFamily: "Poppins_400Regular",
           color: status === "Entrada" ? "#1eff00" : "#fa3b1a",
+          letterSpacing: 1.3,
+          lineHeight: 30,
         }}
       >
         {status === "Entrada" ? "" : "-"} {}
         {valorFormatado}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 }

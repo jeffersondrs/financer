@@ -57,19 +57,23 @@ export default function ButtonAdd({}: ButtonAddProps) {
         onPress={() => setModalVisible(true)}
         style={{
           position: "absolute",
-          bottom: 2,
+          top: 185,
           right: 5,
           zIndex: 2,
-          backgroundColor: "#ffd500aa",
-          borderColor: "#000aa",
-          borderWidth: 1,
-          padding: 15,
-          borderRadius: 50,
+          backgroundColor: "#ffd500",
+          paddingVertical: 10,
+          paddingHorizontal: 15,
           display: modalVisible ? "none" : "flex",
-          opacity: 0.9,
+          opacity: 1,
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 10,
+          borderRadius: 15,
         }}
       >
-        <Plus size={30} color="#000" />
+        <Text style={{ color: "#000" }}>Adicionar</Text>
+        <Plus size={15} color="#000" />
       </TouchableOpacity>
     </>
   );
