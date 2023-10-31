@@ -1,13 +1,8 @@
 import { Text, View, TouchableOpacity } from "react-native";
 import { useFonts, Poppins_400Regular } from "@expo-google-fonts/poppins";
+import { ItemsProps } from "../types/global-types";
 
-type ItemsProps = {
-  title: string;
-  value: number;
-  date: string;
-  status: string;
-  month?: string;
-};
+
 
 export default function Items({ title, value, date, status }: ItemsProps) {
   let [fontsLoaded, fontError] = useFonts({
@@ -21,6 +16,7 @@ export default function Items({ title, value, date, status }: ItemsProps) {
     style: "currency",
     currency: "BRL",
   });
+  
   return (
     <TouchableOpacity
       style={{

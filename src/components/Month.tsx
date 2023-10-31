@@ -1,47 +1,59 @@
 import { View, Text } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import { dataMonth } from "../data/data";
 import { useState } from "react";
+import DropDownPicker from "react-native-dropdown-picker";
+import { ChevronDown, ChevronUp, Check } from "lucide-react-native";
 
 export default function MonthComponent() {
-  const [selectMonth, setSelectMonth] = useState();
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState(null);
+  const [items, setItems] = useState(dataMonth);
+  console.log(value);
   return (
     <View
       style={{
         position: "relative",
-        backgroundColor: "#000",
         width: 150,
-        height: 40,
+        paddingHorizontal: 10.3,
       }}
     >
+      <DropDownPicker
+        open={open}
+        value={value}
+        items={items}
+        setOpen={setOpen}
+        setValue={setValue}
+        setItems={setItems}
+        placeholder="Mês"
+        ArrowDownIconComponent={() => <ChevronDown color="#fff" size={16}/>}
+        ArrowUpIconComponent={() => <ChevronUp color="#fff" size={16}/>}
+        TickIconComponent={() => <Check color="#fff" size={16}/>}
 
-      <Picker
-        selectedValue={selectMonth}
-        dropdownIconColor={"#ffd500"}
-        dropdownIconRippleColor={"#ffd500"}
-        style={{
-          width: "100%",
-          height: "100%",
-          color: "#ffd500",
+        placeholderStyle={{
+          fontSize: 14,
+          color: "#fff",
+          borderRadius: 0,
         }}
-        itemStyle={{ color: "#ffd500" }}
-        onValueChange={(itemValue, itemIndex) => setSelectMonth(itemValue)}
-      >
-        {dataMonth.map((item, index) => {
-          return (
-            <Picker.Item
-              label={item.month}
-              value={item.month}
-              key={index}
-              style={{
-                color: "#ffd500",
-                backgroundColor: "#000",
-                fontSize: 14,
-              }}
-            />
-          );
-        })}
-      </Picker>
+        labelStyle={{
+          fontSize: 14,
+          color: "#fff",
+          borderRadius: 0,
+        }}
+        listItemLabelStyle={{
+          fontSize: 14,
+          color: "#fff",
+          borderRadius: 0,
+        }}
+        dropDownContainerStyle={{
+          backgroundColor: "#000",
+          borderRadius: 0,
+        }}
+
+        style={{
+          backgroundColor: "#000",
+          borderRadius: 0,
+        }}
+      />
     </View>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal, TouchableOpacity, View, Text } from "react-native";
-import { Plus, X } from "lucide-react-native";
+import { Plus, X , ChevronDownIcon} from "lucide-react-native";
 
 type ButtonAddProps = {};
 
@@ -31,7 +31,8 @@ export default function ButtonAdd({}: ButtonAddProps) {
               height: "50%",
               backgroundColor: "#000",
               borderRadius: 10,
-              padding: 20,
+              paddingTop: 30,
+              paddingHorizontal: 20,
             }}
           >
             <TouchableOpacity
@@ -41,15 +42,16 @@ export default function ButtonAdd({}: ButtonAddProps) {
                 top: 10,
                 right: 10,
                 zIndex: 1,
-                borderColor: "#ffd500",
-                borderWidth: 1,
-                padding: 6,
-                borderRadius: 10,
               }}
             >
-              <X size={24} color="#ffd500" />
+              <ChevronDownIcon size={20} color="#ffd500" />
             </TouchableOpacity>
-            <Text>Modal</Text>
+            <Text style={{
+              color: "#ffd500",
+              fontSize: 24,
+              fontFamily: "Poppins_500Medium",
+              width: "100%",
+            }}>Modal</Text>
           </View>
         </View>
       </Modal>

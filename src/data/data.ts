@@ -8,7 +8,8 @@ export type DataItem = {
 
 export type MonthComponentProps = {
   id: number;
-  month: string;
+  label: string;
+  value: string;
 }[];
 export const data: DataItem = [
   {
@@ -100,50 +101,62 @@ export const data: DataItem = [
 export const dataMonth: MonthComponentProps = [
   {
     id: 1,
-    month: "Janeiro",
+    label: "Janeiro",
+    value: "Janeiro"
   },
   {
     id: 2,
-    month: "Fevereiro",
+    label: "Fevereiro",
+    value: "Fevereiro"
   },
   {
     id: 3,
-    month: "Março",
+    label: "Março",
+    value: "Março"
   },
   {
     id: 4,
-    month: "Abril",
+    label: "Abril",
+    value: "Abril"
   },
   {
     id: 5,
-    month: "Maio",
+    label: "Maio",
+    value: "Maio"
   },
   {
     id: 6,
-    month: "Junho",
+    label: "Junho",
+    value: "Junho"
   },
   {
     id: 7,
-    month: "Julho",
+    label: "Julho",
+    value: "Julho"
   },
   {
     id: 8,
-    month: "Agosto",
+    label: "Agosto",
+    value: "Agosto"
   },
   {
     id: 9,
-    month: "Setembro",
+    label: "Setembro",
+    value: "Setembro"
   },
   {
     id: 10,
-    month: "Outubro",
+    label: "Outubro",
+    value: "Outubro"
   },
   {
     id: 11,
-    month: "Novembro",
+    label: "Novembro",
+    value: "Novembro"
   },
   {
     id: 12,
-    month: "Dezembro",
+    label: "Dezembro",
+    value: "Dezembro"
   },
 ];
