@@ -8,7 +8,7 @@ export default function MonthComponent() {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState(dataMonth);
-  console.log(value);
+  
   return (
     <View
       style={{

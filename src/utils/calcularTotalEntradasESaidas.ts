@@ -11,3 +11,20 @@ export const calcularTotalEntradasESaidas = (data: DataItem) => {
 
   return totalEntradas - totalSaidas;
 };
+
+export function formatCurrency(inputValue: string) {
+  // Remove caracteres não numéricos (por exemplo, vírgulas e pontos)
+  const numericValue = inputValue.replace(/[^0-9]/g, '');
+
+  // Divide o valor em reais e centavos
+  const reais = numericValue.slice(0, -2);
+  const centavos = numericValue.slice(-2);
+
+  // Formata o valor com separadores de milhar
+  let formattedValue = reais.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+  // Adiciona a vírgula entre reais e centavos
+  formattedValue = formattedValue + ',' + centavos;
+
+  return formattedValue;
+}

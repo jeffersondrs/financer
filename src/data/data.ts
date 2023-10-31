@@ -102,61 +102,61 @@ export const dataMonth: MonthComponentProps = [
   {
     id: 1,
     label: "Janeiro",
-    value: "Janeiro"
+    value: "janeiro"
   },
   {
     id: 2,
     label: "Fevereiro",
-    value: "Fevereiro"
+    value: "fevereiro"
   },
   {
     id: 3,
     label: "Março",
-    value: "Março"
+    value: "março"
   },
   {
     id: 4,
     label: "Abril",
-    value: "Abril"
+    value: "abril"
   },
   {
     id: 5,
     label: "Maio",
-    value: "Maio"
+    value: "maio"
   },
   {
     id: 6,
     label: "Junho",
-    value: "Junho"
+    value: "junho"
   },
   {
     id: 7,
     label: "Julho",
-    value: "Julho"
+    value: "julho"
   },
   {
     id: 8,
     label: "Agosto",
-    value: "Agosto"
+    value: "agosto"
   },
   {
     id: 9,
     label: "Setembro",
-    value: "Setembro"
+    value: "setembro"
   },
   {
     id: 10,
     label: "Outubro",
-    value: "Outubro"
+    value: "outubro"
   },
   {
     id: 11,
     label: "Novembro",
-    value: "Novembro"
+    value: "novembro"
   },
   {
     id: 12,
     label: "Dezembro",
-    value: "Dezembro"
+    value: "dezembro"
   },
 ];

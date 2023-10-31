@@ -7,8 +7,8 @@ export type FinancePropsComponent = {
 
 export type ItemsProps = {
   title: string;
-  value: number;
+  value: number | string;
   date: string;
-  status: string;
+  status: string | null;
   month?: string;
 };

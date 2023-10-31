@@ -21,7 +21,7 @@ export default function Page() {
       <StatusBar hidden={true} />
 
       <Header
-        name="Jefferson Santos"
+        name="Jefferson D. Santos"
         status="não disponível"
         value={totalEntradasMenosSaidas}
       />
